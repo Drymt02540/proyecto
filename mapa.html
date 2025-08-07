@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa | Cremería</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f3f6fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contenedor-mapa {
+      width: 90vw;
+      height: 85vh;
+      max-width: 1200px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 4px solid #4CAF50;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      background-color: white;
+      position: relative;
+    }
+
+    .contenedor-mapa::before {
+      content: '📍 Mapa de la Cremería';
+      position: absolute;
+      top: -60px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #2e7d32;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: grayscale(0%) contrast(105%) brightness(105%);
+      transition: filter 0.3s ease;
+    }
+
+    iframe:hover {
+      filter: grayscale(0%) contrast(110%) brightness(110%);
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor-mapa">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d286.9525004070393!2d-98.98676097610543!3d19.930766001817325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1749502623620!5m2!1ses!2smx" 
+      allowfullscreen 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Mapa de la Cremería">
+    </iframe>
+  </div>
+</body>
+</html>
